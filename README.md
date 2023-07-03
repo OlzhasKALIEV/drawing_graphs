@@ -1,8 +1,16 @@
 # drawing_graphs
 
-Необходимо выполнить пост запрос 
-POST - localhost:5000/api/v1/drawing_graphs/
-далее отправить JSON по адресу localhost:5000/api/v1/drawing_graphs/
+Данный запросы необходимо выполнять в Постмане (postman)
+
+Для получения всех картинов в папке "графики" необходимо выполнить GET запрос
+GET - http://localhost:5000/api/v1/drawing_graphs/all
+
+
+(перед тем как выполнять GET запрос необходимо создать график с помощью запроса POST, пример выполнения запроса ниже)
+
+Для создания графика необходимо выполнить POST запрос 
+POST - http://localhost:5000/api/v1/drawing_graphs/
+далее отправить JSON на url = http://localhost:5000/api/v1/drawing_graphs/
 
 {
     "column_1":"mean",

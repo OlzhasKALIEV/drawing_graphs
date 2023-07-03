@@ -38,7 +38,7 @@ class PlotDrawer:
         file_path = os.path.join(plots_folder, file_name)
         self.fig.savefig(file_path)
 
-        return url_for("static", filename=file_path)
+        return file_path
 
 # Использование класса PlotDrawer и функции draw_plots
 # json_file_url = "https://ai-process-sandy.s3.eu-west-1.amazonaws.com/purge/deviation.json"
