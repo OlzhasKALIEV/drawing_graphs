@@ -12,13 +12,13 @@ app = Flask(__name__)
 
 @app.route('/api/v1/drawing_graphs/all/', methods=["GET"])
 def get_drawing_graphs():
-    images_folder = 'графики'
+    images_folder = 'charts'
     images = os.listdir(images_folder)
 
     image_list = []
     for image in images:
         image_path = os.path.join(images_folder, image)
-        image_url = f"графики/{image}"
+        image_url = f"charts/{image}"
         image_dict = {"filename": image, "url": image_url}
         image_list.append(image_dict)
     return jsonify(images=image_list)
@@ -36,7 +36,7 @@ def drawing_graphs():
 
     plot_drawer = PlotDrawer()
     plot_drawer.draw_plots(graph_json_column["column_1"], graph_json_column["column_2"])
-    return make_response(f"График создан")
+    return make_response(f"Chart created")
 
 
 if __name__ == "__main__":
